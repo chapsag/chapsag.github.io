@@ -17,6 +17,8 @@ const browserSync = require('browser-sync');
 const { reload } = browserSync;
 const Promise = require('promise');
 
+var deploy = require('gulp-gh-pages');
+
 /*-----------------------------------------------
 |   Paths
 -----------------------------------------------*/
@@ -495,6 +497,14 @@ gulp.task('serve', () => {
     open: true,
     notify: false,
   });
+});
+
+/*-----------------------------------------------
+|   Starting everything
+-----------------------------------------------*/
+
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*').pipe(deploy());
 });
 
 /*-----------------------------------------------

@@ -1,9 +1,9 @@
 {
   "extends": "airbnb-base",
-  "env":{
+  "env": {
     "es6": true,
-    "browser":true,
-    "jquery":true
+    "browser": true,
+    "jquery": true
   },
   "rules": {
     "padded-blocks": "off",
